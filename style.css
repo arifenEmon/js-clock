@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+}
+.clock{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.clock-face{
+    background-image: url('img/01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    position: relative;
+    
+}
+.clock-face:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+    height: 18px;
+    width: 17px;
+    border-radius: 50%;
+    background: #14140e;
+}
+.hand{
+    width: 115px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 57px;
+    background: red;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.5s;
+    transition-timing-function: cubic-bezier(0, 1.38, 1, 0.86);
+}
